@@ -11,7 +11,7 @@ This uses a side-effect of the ansible `copy` module and `force: no`, which can 
 ``` yaml
 ---
 - name: Add a new file
-  hosts: foo.localdomain
+  hosts: bobcat.att.net
   tasks:
     - name: Conditionally create a file if it does not exist
       copy:
@@ -21,9 +21,9 @@ This uses a side-effect of the ansible `copy` module and `force: no`, which can 
         owner: root
         group: root
         mode: 0400
-        become: true
-        become_with: sudo
-        become_user: root
+      become: true
+      become_with: sudo
+      become_user: root
 ```
 
 ## Option 2: shell module
