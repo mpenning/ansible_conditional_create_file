@@ -22,6 +22,7 @@ This uses a side-effect of the ansible `copy` module and `force: no`, which can 
         group: root
         mode: 0400
         become: true
+        become_with: sudo
         become_user: root
 ```
 
