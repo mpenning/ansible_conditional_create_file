@@ -6,7 +6,7 @@ Use ansible to conditionally create a file.  There are two options for doing thi
 
 ## Option 1: copy module with sudo
 
-This uses a side-effect of the ansible `copy` module, which can create a file as root.
+This uses a side-effect of the ansible `copy` module and `force: no`, which can create a file as root.
 
 ``` yaml
 ---
